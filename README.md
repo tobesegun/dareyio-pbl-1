@@ -1,1 +1,1 @@
-Solved darey.io projects.
+darey.io projects
