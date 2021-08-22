@@ -188,7 +188,7 @@
       cidr_blocks = [ "0.0.0.0/0" ]
       description = "ALB security group"
       from_port = 80
-      protocol = "HTTP"
+      protocol = "tcp"
       to_port = 80
       self = false
     }
@@ -196,7 +196,7 @@
       cidr_blocks = [ "0.0.0.0/0" ]
       description = "ALB security group"
       from_port = 443
-      protocol = "HTTPS"
+      protocol = "tcp"
       to_port = 443
       self = false
     }
@@ -378,7 +378,7 @@
     }
   }
   ```
-  ** Set var.bastion_ami to "ami-0db9a12ec65f80ea2" in your variables.tf file
+  ** Set var.bastion_ami to "ami-0b0af3577fe5e3532" in your variables.tf file
 
 - Create internal facing lb for your webservers:
   ```
@@ -461,7 +461,7 @@
 - Create a KMS Key for EFS, add the following to kms.tf
   ```
   resource "aws_kms_key" "kms" {
-    description = "KMS key "
+    description = "KMS key"
     policy = jsonencode({
     "Version": "2012-10-17",
     "Id": "kms-key-policy",
