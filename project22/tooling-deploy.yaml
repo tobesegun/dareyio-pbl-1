@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tooling
+  labels:
+    app: tooling
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: tooling
+    tier: frontend
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tooling
+  labels:
+    app: tooling
+spec:
+  selector:
+    matchLabels:
+      app: tooling
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: tooling
+        tier: frontend
+    spec:
+      containers:
+        - image: anefu/tooling:1.0
+          name: tooling
+          ports:
+          - containerPort: 80
+            name: tooling
