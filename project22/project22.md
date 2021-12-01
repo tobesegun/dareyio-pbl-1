@@ -20,11 +20,11 @@
   kubectl apply -f pod.yaml
   ```
   ![](imgs/nginxpod.png)
-Fileds:
-- apiVersion: Which version of the Kubernetes API you're using to create this object
-- kind: Kind of object to create
-- metadata: Data that helps uniquely identify the object
-- spec: Contains further information about the Pod. Where to find the image to run the container – (this defaults to Docker Hub), the port and protocol
+Fields:
+  - apiVersion: Which version of the Kubernetes API you're using to create this object
+  - kind: Kind of object to create
+  - metadata: Data that helps uniquely identify the object
+  - spec: Contains further information about the Pod. Where to find the image to run the container – (this defaults to Docker Hub), the port and protocol
 
 ## Accessing the app from the browser
 - Access the pod through its IP from within the K8s cluster
@@ -81,8 +81,8 @@ Fileds:
 - Write a Pod and a Service manifests, ensure that you can access the Tooling app’s frontend using port-forwarding feature.
   - [tooling manifest](tooling.yaml)
   - [db manifest](db.yaml)
-  ![](imgs/tooling-port-forward.png)
-  ![](imgs/tooling.png)
+![](imgs/tooling-port-forward.png)
+![](imgs/tooling.png)
 
 ## Expose services using NodePort
 ```yaml
@@ -202,4 +202,3 @@ spec:
   ```
 - Check the browser
   ![](imgs/edit-index.png)
-  
