@@ -76,13 +76,16 @@ Fields:
   ![](imgs/portforward.png)
 
 ## Self Side Task
+![](imgs/tooling-port-forward.png)
+![](imgs/tooling.png)
 - Build the Tooling app Dockerfile and push it to Dockerhub registry
   ![](imgs/push.png)
 - Write a Pod and a Service manifests, ensure that you can access the Tooling app’s frontend using port-forwarding feature.
   - [tooling manifest](tooling.yaml)
+    ![](imgs/tooling-port-forward.png)
+    ![](imgs/tooling.png)
   - [db manifest](db.yaml)
-![](imgs/tooling-port-forward.png)
-![](imgs/tooling.png)
+
 
 ## Expose services using NodePort
 ```yaml
